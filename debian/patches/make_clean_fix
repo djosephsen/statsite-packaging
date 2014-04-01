@@ -1,0 +1,32 @@
+Description: make clean isnt
+ The Makefile doesn't remove object files and other stuff
+ .
+ statsite (0.6.0-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Author: Dave Josephsen <dave@librato.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- statsite-0.6.0.orig/Makefile
++++ statsite-0.6.0/Makefile
+@@ -3,7 +3,7 @@ build:
+ 	scons statsite
+ 
+ clean:
+-	rm -rfv ./dist ./statsite ./rpm-build
++	rm -rfv ./dist ./statsite ./rpm-build ./src/*.o ./deps/murmurhash/*.o ./deps/inih/*.o *.a .scons*
+ 
+ test_runner:
+ 	scons test_runner

@@ -1,0 +1,32 @@
+Description: Patch the librato sink to properly handle the kv type
+ Patch the librato sink to properly handle the kv type
+ .
+ statsite (0.6.0-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Author: Dave Josephsen <dave@librato.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- statsite-0.6.0.orig/sinks/librato.py
++++ statsite-0.6.0/sinks/librato.py
+@@ -70,7 +70,7 @@ class LibratoStore(object):
+         self.max_metrics_payload = 500
+ 
+         self.timer_re = re.compile("^timers\.")
+-        self.type_re = re.compile("^(timers|counts|gauges|sets)\.(.+)$")
++        self.type_re = re.compile("^(kv|timers|counts|gauges|sets)\.(.+)$")
+ 
+         self.sfx_map = {
+             'sum': 'sum',

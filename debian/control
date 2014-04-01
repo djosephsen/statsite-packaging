@@ -1,0 +1,16 @@
+Source: statsite
+Section: net
+Priority: optional
+Maintainer: Dave Josephsen <dave@librato.com>
+Build-Depends: debhelper (>= 8.0.0),build-essential,scons,lsof
+Standards-Version: 3.9.2
+Homepage: https://github.com/armon/statsite
+Vcs-Git: git://github.com/armon/statsite.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/statsite.git;a=summary
+
+Package: statsite
+Architecture: any
+Depends: ${misc:Depends}
+Description: C implementation of statsd
+ Statsite is a metrics aggregation server. Statsite is based heavily on Etsy's
+ StatsD (https://github.com/etsy/statsd), and is wire compatible.

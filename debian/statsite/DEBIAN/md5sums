@@ -1,0 +1,8 @@
+2c5effb7f42e217069700e09db0c41c3  usr/libexec/statsite/graphite.py
+702e33d918bebbf4707e33bb58cd75fe  usr/libexec/statsite/librato.py
+cb301c3dc6f18f456d413214d8950bc9  usr/sbin/statsite
+0a8d389cf170f3cea6cd23babd9afdc0  usr/share/doc/statsite/README.Debian
+79f1dca82936088a95ae7e77ef4ebb2f  usr/share/doc/statsite/README.md.gz
+39b6fc1718a2cee784201c9fe46a5c94  usr/share/doc/statsite/changelog.Debian.gz
+4f4d775a8a43e08265f60070f0b4ffca  usr/share/doc/statsite/copyright
+62f41d83fb71a6b82e1becb4ffd0b4f3  usr/share/info/check.info.gz

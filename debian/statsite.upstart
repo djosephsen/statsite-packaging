@@ -1,0 +1,12 @@
+# statsite - a statsd reimplementation in C
+#
+# statsite is a metrics aggregation daemon
+
+description	"statsite is a metrics aggregation daemon"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+
+exec /usr/sbin/statsite -f /etc/statsite/statsite.cfg

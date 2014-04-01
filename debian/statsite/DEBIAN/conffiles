@@ -1,0 +1,3 @@
+/etc/statsite/statsite.cfg
+/etc/statsite/librato_sink.cfg
+/etc/init/statsite.conf

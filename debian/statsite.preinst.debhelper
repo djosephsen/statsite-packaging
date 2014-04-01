@@ -1,0 +1,14 @@
+# Automatically added by dh_installinit
+if [ "$1" = install ] || [ "$1" = upgrade ]; then
+	if [ -e "/etc/init.d/statsite" ] && [ ! -L "/etc/init.d/statsite" ]; then
+		if [ "`md5sum \"/etc/init.d/statsite\" | sed -e \"s/ .*//\"`" != \
+		     "`dpkg-query -W -f='${Conffiles}' statsite | sed -n -e \"\\\\' /etc/init.d/statsite '{s/ obsolete$//;s/.* //p}\"`" ]
+		then
+			echo "Obsolete conffile /etc/init.d/statsite has been modified by you, renaming to .dpkg-bak"
+			mv -f "/etc/init.d/statsite" "/etc/init.d/statsite.dpkg-bak"
+		else
+			rm -f "/etc/init.d/statsite"
+		fi
+	fi
+fi
+# End automatically added section

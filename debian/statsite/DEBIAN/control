@@ -1,0 +1,12 @@
+Package: statsite
+Version: 0.6.0-1
+Architecture: i386
+Maintainer: Dave Josephsen <dave@librato.com>
+Installed-Size: 225
+Depends: dpkg (>= 1.15.4) | install-info, upstart-job
+Section: net
+Priority: optional
+Homepage: https://github.com/armon/statsite
+Description: C implementation of statsd
+ Statsite is a metrics aggregation server. Statsite is based heavily on Etsy's
+ StatsD (https://github.com/etsy/statsd), and is wire compatible.

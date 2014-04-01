@@ -1,0 +1,2 @@
+misc:Depends=dpkg (>= 1.15.4) | install-info, upstart-job
+shlibs:Depends=libc6 (>= 2.3.6-6~), libc6 (>= 2.9)

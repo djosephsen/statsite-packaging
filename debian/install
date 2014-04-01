@@ -1,0 +1,5 @@
+statsite usr/sbin
+sinks/librato.py usr/libexec/statsite
+sinks/graphite.py usr/libexec/statsite
+debian/statsite.cfg etc/statsite
+debian/librato_sink.cfg etc/statsite
